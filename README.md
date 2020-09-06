@@ -233,6 +233,8 @@ You can also directly talk to the endpoints:
 | /api/cycle_audio_device            | POST   |                                    | Cycle trough audio devices. [More information.](#audio-devices-string)  |
 | /api/speed_set/:speed              | POST   | `int` or `float`                   | Set playback speed to `:speed` (defaults to `1` for quick reset)        |
 | /api/speed_adjust/:amount          | POST   | `int` or `float`                   | Multiply playback speed by `:amount` (where `1.0` is no change)         |
+| /api/loadfile /:url/:mode          | POST   | :url `string` <br />:mode `string`  options: `replace` (default), `append`, `append-play` | Load file to playlist. |
+
 
 All POST endpoints return a JSON message. If successful: `{"message": "success"}`, otherwise, the message will contain
 information about the error.
